@@ -1,0 +1,81 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding: 24px 20px 32px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  animation: fade-in 0.3s ease;
+}
+
+/* Webcam layout: 2-col grid */
+.webcamLayout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Upload layout: centered single column */
+.uploadLayout {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.videoWrapper {
+  position: relative;
+  background: #000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.videoWrapper.connected {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.videoWrapper video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.errorBanner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--status-error-dim);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  color: var(--status-error);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  margin-bottom: 16px;
+  animation: fade-in 0.2s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .webcamLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    padding: 16px 12px 24px;
+  }
+}

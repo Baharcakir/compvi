@@ -1,0 +1,121 @@
+.panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  animation: slide-up 0.25s ease;
+}
+
+/* ── Panel header ── */
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.titleIcon {
+  color: var(--accent-primary);
+  display: flex;
+}
+
+.countBadge {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  background: var(--accent-primary-dim);
+  color: var(--accent-primary);
+  padding: 2px 8px;
+  border-radius: 99px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  min-width: 28px;
+  text-align: center;
+}
+
+/* ── Detection list ── */
+.list {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.emptyIcon {
+  opacity: 0.3;
+}
+
+.detectionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  animation: fade-in 0.15s ease;
+  transition: border-color var(--transition-fast);
+}
+
+.detectionItem:hover {
+  border-color: var(--border-bright);
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.colorDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.labelText {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  text-transform: capitalize;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.confidence {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  padding: 2px 7px;
+  background: var(--bg-base);
+  border-radius: 4px;
+  border: 1px solid var(--border-default);
+}
