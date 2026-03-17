@@ -33,7 +33,7 @@ RUN apk add --no-cache gettext
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Use a template — envsubst fills in $PORT at startup
-COPY nginx/nginx.railway.conf /etc/nginx/templates/default.conf.template
+COPY nginx/nginx.conf /etc/nginx/templates/default.conf.template
 
 # $PORT default — Railway always overrides this
 ENV PORT=80
