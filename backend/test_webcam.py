@@ -4,7 +4,7 @@
 import cv2
 from ultralytics import YOLO
 
-MODEL_PATH = "../models/best.pt"
+MODEL_PATH = "models/best.pt"
 
 def main():
     model = YOLO(MODEL_PATH)

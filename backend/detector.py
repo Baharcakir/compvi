@@ -9,7 +9,7 @@ from ultralytics import YOLO
 from benchmark import BenchmarkTracker
 
 # Model path from environment variable or default (use custom trained model)
-MODEL_PATH = os.getenv("MODEL_PATH", "../models/best.pt")
+MODEL_PATH = os.getenv("MODEL_PATH", "models/best.pt")
 
 # Custom trained classes for beverage containers
 BEVERAGE_CLASSES: dict[int, str] = {
